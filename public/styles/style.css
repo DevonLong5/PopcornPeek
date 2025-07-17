@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+body {
+  background-color: black;
+}
+
+.flex-container {
+    display: flex;
+
+}
+
+.flex-items {
+    display: flex;
+}
+
+/* Navigation bar */
+#nav-bar {
+  display: flex;
+  height: 4rem;
+  background-color: #222831;
+}
+
+#logo-nav {
+  display: flex;
+  width: 3rem;
+}
+#logo-nav > img {
+  height: 3.5rem;
+}
+#nav-links {
+  height: 4rem;
+}
+#nav-links > ul {
+  padding: 0;
+  margin: 0;
+}
+#nav-links li {
+    display: inline-flex;
+  list-style: none;
+  justify-content: center;
+}
