@@ -1,5 +1,16 @@
 <%- include("partials/header.ejs") %>
-
-<form action="/"></form>
+<div class="container">
+  <div class="flex-container p-2">
+    <div class="flex-items">
+      <form action="/movie" method="post">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" />
+        <label for="movie">Movie:</label>
+        <input type="text" id="movie" name="movie" />
+        <input type="submit" value="Submit" class="btn" />
+      </form>
+    </div>
+  </div>
+</div>
 
 <%- include("partials/footer.ejs") %>
