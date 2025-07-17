@@ -4,41 +4,37 @@
   color: white;
 }
 body {
-  background-color: black;
+  background-color: whitesmoke;
 }
 
 .flex-container {
-    display: flex;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .flex-items {
-    display: flex;
+  display: flex;
 }
 
 /* Navigation bar */
 #nav-bar {
-  display: flex;
   height: 4rem;
   background-color: #222831;
 }
 
 #logo-nav {
-  display: flex;
   width: 3rem;
 }
 #logo-nav > img {
   height: 3.5rem;
-}
-#nav-links {
-  height: 4rem;
+  justify-content: center;
 }
 #nav-links > ul {
   padding: 0;
   margin: 0;
 }
-#nav-links li {
-    display: inline-flex;
-  list-style: none;
-  justify-content: center;
+#nav-links > ul > li {
+  display: inline-block;
+  list-style-type: none;
 }
