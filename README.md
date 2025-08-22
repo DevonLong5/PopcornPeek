@@ -1,21 +1,21 @@
 PopcornPeek is a movie lookup app that allows the user to lookup movies by title or IMDb ID. It displays up to 12 movies at a time sharing each one's poster, title, overview, and release date.
 
 **Features**
-Search movies by title
-
-Lookup movies using IMDb ID
-
-Displays movie details (title, year, genre, plot, etc.)
-
-Shows official movie poster
+  Search movies by title
+  
+  Lookup movies using IMDb ID
+  
+  Displays movie details (title, year, genre, plot, etc.)
+  
+  Shows official movie poster
 
 **Tech Stack**
-
-Frontend: HTML, CSS, JavaScript (Vanilla/Bootstrap)
-
-Backend: Node.js / Express
-
-API: TMDb API
+  
+  Frontend: HTML, CSS, JavaScript (Vanilla/Bootstrap)
+  
+  Backend: Node.js / Express
+  
+  API: TMDb API
 
 **To get the Express server running:**
 
