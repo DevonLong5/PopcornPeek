@@ -6,7 +6,7 @@ PopcornPeek is a movie lookup app that allows the user to look up movies by titl
   
   -Lookup movies using IMDb ID
   
-  -Displays movie details (title, year, genre, plot, etc.)
+  -Displays movie details (title, year, plot)
   
   -Shows the official movie poster
 
