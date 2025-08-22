@@ -1,16 +1,37 @@
 <%- include("partials/header.ejs") %>
-<div class="container">
-  <div class="flex-container p-2">
-    <div class="flex-items">
-      <form action="/movie" method="post">
-        <label for="id">ID:</label>
-        <input type="text" id="id" name="id" />
-        <label for="movie">Movie:</label>
-        <input type="text" id="movie" name="movie" />
-        <input type="submit" value="Submit" class="btn" />
-      </form>
+<div class="container d-flex justify-content-center">
+  <div class="pt-3">
+    <form action="/movie" method="post">
+      <label for="id">iMDB ID:</label>
+      <input type="text" id="id" name="id" />
+      <label for="movie">Movie:</label>
+      <input type="text" id="movie" name="movie" />
+      <input type="submit" value="Submit" class="btn btn-dark" />
+    </form>
+  </div>
+  </div>
+  <br />
+  <% if (!locals.movie) { %>
+    <div style="height: 80vh;"></div>
+  <% } %>
+  <% if (locals.movie) {%>
+    <div class="container d-flex justify-content-center">
+        <div class="row align-items-start">
+    <%locals.movie.forEach(movies => {%>
+      <div class="col">
+   <div class="card bg-transparent m-3 " style="width: 22rem;">
+      <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movies.backdrop_path %>" alt="Movie poster" />
+      <div class="card-body">
+        <h5 class="card-title text-white"><%= movies.title %></h5>
+        <p class="card-text text-white"><%= movies.overview.slice(0, 250) %></p>
+        <p class="card-text text-white"><%= movies.release_date %></p>
+      </div>
+    </div>
+    </div>
+    <% }); %>
+  <% } %>
     </div>
   </div>
-</div>
-
-<%- include("partials/footer.ejs") %>
+  </div>
+  </div>
+  <%- include("partials/footer.ejs") %>
