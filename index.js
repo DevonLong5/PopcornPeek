@@ -49,8 +49,8 @@ app.post("/movie", async (req, res) => {
     }
   }
 
-  //Search by id
-  if (id && !movie) {
+  //Search by id, if user inputs a movie title and an ID, ID will override
+  if ((id && !movie) || (id && movie)) {
     try {
       const result = await axios.get(
         `https://api.themoviedb.org/3/find/${id}?external_source=imdb_id`,
@@ -64,28 +64,6 @@ app.post("/movie", async (req, res) => {
       console.log(result.data);
       res.render("index.ejs", {
         movie: result.data.movie_results,
-      });
-    } catch (error) {
-      res.status(404).send("Error", error.message);
-      console.log(error.message);
-    }
-  }
-
-  //If user inputs a movie title and an ID, ID will override
-  if (id && movie) {
-    try {
-      const result = await axios.get(
-        `https://api.themoviedb.org/3/find/${id}?external_source=imdb_id` ,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: "application/json",
-          },
-        }
-      );
-      console.log(result.data.movie_results );
-      res.render("index.ejs", {
-        movie: result.data.movie_results ,
       });
     } catch (error) {
       res.status(404).send("Error", error.message);

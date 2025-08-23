@@ -20,7 +20,11 @@
     <%locals.movie.forEach(movies => {%>
       <div class="col">
    <div class="card bg-transparent m-3 " style="width: 22rem;">
+    <% if (movies.backdrop_path == null) { %>
+      <img class="card-img-top" style="height: 200px;" src="/images/logo.png" alt="Movie poster">
+      <%} else {%>
       <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/<%= movies.backdrop_path %>" alt="Movie poster" />
+      <% } %>
       <div class="card-body">
         <h5 class="card-title text-white"><%= movies.title %></h5>
         <p class="card-text text-white"><%= movies.overview.slice(0, 250) %></p>
